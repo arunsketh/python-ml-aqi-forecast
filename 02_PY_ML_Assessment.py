@@ -1446,8 +1446,8 @@ ann_param_grid = {
    # 'batch_size': [50]
     
     # A specific grid for the final run
-    'n_layers': [4],
-    'epochs': [150],
+    'n_layers': [1, 2, 3,4,5,],
+    'epochs':  [50, 100, 150,200,250,300],
     'units': [128],
     'dropout': [0.1],
     'batch_size': [50]
@@ -2157,4 +2157,5 @@ except ValueError as e:
 except Exception as e:
 
     print(f"❌ An error occurred during plotting: {e}")
+
 
