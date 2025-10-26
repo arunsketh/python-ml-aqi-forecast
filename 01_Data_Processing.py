@@ -439,7 +439,7 @@ print("\n" + "=" * 80)
 print("--- Step 8: Saving Cleaned and Imputed Data ---")
 print("=" * 80)
 
-output_filename = "city_day_cleaned_imputed.csv"
+output_filename = "city_day_imputed_aqi.csv"
 
 # Create a copy of the DataFrame for formatting before saving
 df_cleaned_formatted = df_cleaned.copy()
@@ -513,4 +513,5 @@ print("=" * 80)
 format_dict = {col: '{:.1f}'.format for col in pollutant_cols}
 format_dict[aqi_col] = '{:.0f}'.format
 print(df_cleaned.head().to_string(formatters=format_dict))
+
 print("\n" + "=" * 80)
