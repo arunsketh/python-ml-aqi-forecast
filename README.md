@@ -1,16 +1,14 @@
-Here is the `README.md` content rewritten to use `**` formatting for headers.
-
 -----
 
-**AQI 7-Day Forecasting Pipeline**
+#**AQI 7-Day Forecasting Pipeline**
 
 This project is an end-to-end machine learning pipeline to clean, process, and model Air Quality Index (AQI) data. It performs a comprehensive data imputation pipeline, then trains and evaluates multiple models (`RandomForest`, `PolynomialRegression`, `ANN`, `LinearRegression`) to find the best performer. Finally, it uses the best model to generate a 7-day forecast and visualizes the highest-risk areas on a geographical map of India.
 
-**How to Run in Google Colab**
+#**How to Run in Google Colab**
 
 Follow these steps to run the complete pipeline in a Google Colab notebook.
 
-**Step 1: Setup Environment**
+##**Step 1: Setup Environment**
 
 Clone the repository and move into the new directory. This single command downloads all scripts and required CSV files (`city_day.csv`, `cities_geog.csv`).
 
@@ -19,7 +17,7 @@ Clone the repository and move into the new directory. This single command downlo
 %cd python-ml-aqi-forecast
 ```
 
-**Step 2: Install Dependencies**
+##**Step 2: Install Dependencies**
 
 Run this command in a Colab cell to install all required libraries for the three scripts.
 
@@ -27,11 +25,11 @@ Run this command in a Colab cell to install all required libraries for the three
 !pip install pandas numpy scikit-learn matplotlib seaborn tensorflow altair cartopy joblib
 ```
 
-**Step 3: Run the Pipeline (3 Scripts)**
+##**Step 3: Run the Pipeline (3 Scripts)**
 
 The pipeline must be run in order.
 
-**1. Run the Data Processing Script**
+###**1. Run the Data Processing Script**
 
 This script loads `city_day.csv`, performs advanced imputation (using `KNNImputer` for pollutants and `LinearRegression` for AQI), and saves the clean data.
 
@@ -42,7 +40,7 @@ This script loads `city_day.csv`, performs advanced imputation (using `KNNImpute
   * **Input:** `city_day.csv`
   * **Output:** `city_day_imputed_aqi.csv` (plus 6 visualization images like `01_data_gaps_heatmap.png`)
 
-**2. Run the Model Training & Forecasting Script**
+###**2. Run the Model Training & Forecasting Script**
 
 This is the main script. It loads the cleaned data, trains all models, tunes them, selects the best one (RandomForest, based on the script's logic), and generates a 7-day forecast.
 
@@ -55,7 +53,7 @@ At the very end, it will print a **"High-Risk Pollution Report"** to your consol
   * **Input:** `city_day_imputed_aqi.csv`, `cities_geog.csv`
   * **Output:** Prints a text report to the console (see next step). Also saves model files (`.joblib`, `.h5`) and heatmap images (`randomforest_aqi_forecast_heatmap.png`).
 
-**3. CRITICAL STEP: Update the Map Script**
+###**3. CRITICAL STEP: Update the Map Script**
 
 This pipeline requires a **manual copy-paste** step.
 
@@ -81,7 +79,7 @@ This pipeline requires a **manual copy-paste** step.
 
 5.  **Delete** the old text inside the `"""` and **paste your new report** from the console.
 
-**Before:**
+###**Before:**
 
 ```python
 forecast_text = """
@@ -104,7 +102,7 @@ forecast_text = """
 
 6.  Save the file (Ctrl+S or File \> Save).
 
-**4. Run the Map Generation Script**
+##**4. Run the Map Generation Script**
 
 Now that the script has your custom forecast data, you can run it to generate the maps.
 
@@ -117,7 +115,7 @@ Now that the script has your custom forecast data, you can run it to generate th
 
 -----
 
-**Project Pipeline Explained**
+##**Project Pipeline Explained**
 
 **1. `01_Data_Processing.py`**
 
