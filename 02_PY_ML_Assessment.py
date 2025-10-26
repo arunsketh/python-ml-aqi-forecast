@@ -594,7 +594,7 @@ df_geog_clean = load_geog_data(geog_data_path)
 # If loading was successful, print a sample
 if df_geog_clean is not None:
     print("📊 Geographical data sample:")
-    display(df_geog_clean.head()) # 'display' is used in notebooks for rich output
+#    display(df_geog_clean.head()) # 'display' is used in notebooks for rich output
 
 # ===================================================================
 # === Primary Data Ingestion and Merging
@@ -619,7 +619,7 @@ try:
 
     print("✅ Successfully merged AQI and geographical data.")
     print("📊 Merged data sample:")
-    display(df_merged.head())
+    #display(df_merged.head())
 
 except FileNotFoundError:
     # Handle missing AQI file
@@ -2157,3 +2157,4 @@ except ValueError as e:
 except Exception as e:
 
     print(f"❌ An error occurred during plotting: {e}")
+
