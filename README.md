@@ -1,5 +1,3 @@
-Here is the project documentation, formatted according to your request.
-
 ## AQI 7-Day Forecasting Pipeline
 
 This project is an end-to-end machine learning pipeline to clean, process, and model Air Quality Index (AQI) data. It performs a comprehensive data imputation pipeline, then trains and evaluates multiple models (**RandomForest**, **PolynomialRegression**, **ANN**, **LinearRegression**) to find the best performer. Finally, it uses the best model to generate a 7-day forecast and visualizes the highest-risk areas on a geographical map of India.
