@@ -579,7 +579,7 @@ print("📚 All required libraries and modules have been imported.")
 # ===================================================================
 
 # Define base directory for data files (adjust if needed)
-base_path = "C:/Users/asankar/Downloads/"
+base_path = ""
 
 # Path to the main AQI data
 aqi_data_path = os.path.join(base_path, "city_day_imputed_aqi.csv")
@@ -2155,4 +2155,5 @@ except NameError as e:
 except ValueError as e:
     print(f"❌ Data error: {e}")
 except Exception as e:
+
     print(f"❌ An error occurred during plotting: {e}")
