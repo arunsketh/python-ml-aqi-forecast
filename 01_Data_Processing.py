@@ -14,7 +14,7 @@ The pipeline performs the following steps:
   - Visualizes KNN imputation effects with cluster analysis.
   - Uses Linear Regression to impute missing 'AQI' values based on the
     now-complete pollutant data.
-  - Saves this fully cleaned dataset as 'city_day_cleaned_imputed.csv'.
+  - Saves this fully cleaned dataset as 'city_day_imputed_aqi.csv'.
 """
 
 
@@ -515,3 +515,4 @@ format_dict[aqi_col] = '{:.0f}'.format
 print(df_cleaned.head().to_string(formatters=format_dict))
 
 print("\n" + "=" * 80)
+
